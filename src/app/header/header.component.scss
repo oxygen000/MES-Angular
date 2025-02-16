@@ -1,0 +1,65 @@
+body {
+    display: grid;
+    transition: all 0.4s ease;
+}
+
+// الشريط الجانبي
+.home-nav {
+    background: #2D62ED;
+    width: 200px;
+    height: 100vh;
+}
+
+// الشريط العلوي
+.header-bar {
+    display: flex;
+    align-items: center;
+    color: white;
+    margin: 25px;
+    font-size: 15px;
+
+    h1 {
+        margin-left: 30px;
+    }
+}
+
+// **Mixin** لإنشاء عناصر القائمة بسهولة
+@mixin sidebar-item {
+    width: 190px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+    color: #FFFFFF;
+    font: normal normal 600 16px/19px Montserrat;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 0 30px 30px 0;
+
+    &:hover {
+        background: rgba(0, 0, 0, 0.2);
+    }
+
+    &:active {
+        background: rgba(0, 0, 0, 0.3);
+    }
+}
+
+// **القائمة الجانبية**
+.nav-bar {
+    width: 200px;
+
+    .dashboard { @include sidebar-item; margin-top: 80px; }
+    .resources { @include sidebar-item; margin-top: 30px; }
+    .manufacturing { @include sidebar-item; margin-top: 30px; }
+    .machines { @include sidebar-item; margin-top: 30px; }
+    .planning { @include sidebar-item; margin-top: 30px; }
+    .issues { @include sidebar-item; margin-top: 30px; }
+    .settings { @include sidebar-item; margin-top: 100px; }
+    .logout { @include sidebar-item; margin-top: 30px; }
+}
+
+// أيقونات و صور
+.fa-icon, img {
+    margin-left: 15px;
+}

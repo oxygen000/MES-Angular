@@ -1,0 +1,117 @@
+/* ✅ تحسين الخلفية */
+body {
+    background-color: #2D62ED;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('/assets/home/Group408.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ✅ تحسين الصفحة الرئيسية */
+.home-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    padding: 20px;
+    position: relative;
+}
+
+/* ✅ ضبط قسم الترحيب */
+.home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: auto; /* يدفع الأزرار إلى الأسفل */
+}
+
+/* ✅ ضبط نص الترحيب */
+.welcome {
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    padding: 20px;
+}
+
+/* ✅ ضبط حجم الصورة */
+.img-1 {
+    width: 100px;
+    height: auto;
+    margin-right: 30px;
+}
+
+/* ✅ تحسين حاوية الأزرار مع جعلها في الأسفل */
+.btn-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    position: absolute;
+    bottom: 20px; /* يضمن بقاء الأزرار في الأسفل */
+    padding: 10px;
+}
+
+/* ✅ تحسين شكل الأزرار */
+.btn {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    height: 80px;
+    background: #FFFFFF;
+    box-shadow: 2px 3px 6px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    cursor: pointer;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+/* ✅ تحسين نص الأزرار */
+.btn-p {
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    color: #2D62ED;
+}
+
+/* ✅ تأثيرات تفاعلية عند التحويم */
+.btn:hover {
+    transform: scale(1.05);
+    box-shadow: 4px 6px 12px rgba(0, 0, 0, 0.25);
+}
+
+/* ✅ تحسين التصميم على الشاشات الصغيرة */
+@media (max-width: 768px) {
+    .home {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .img-1 {
+        margin-bottom: 15px;
+        margin-right: 0;
+    }
+
+    .btn-container {
+        flex-wrap: wrap; /* يجعل الأزرار تتكيف مع العرض */
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .btn {
+        width: 45%; /* تقليل حجم الأزرار على الشاشات الصغيرة */
+        height: 70px;
+    }
+}
